@@ -8,9 +8,9 @@ interface Props {
 
 const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
 	return (
-		<form className='relative flex flex-row w-3/4 gap-8 m-4' onSubmit={handleAdd}>
+		<form className='relative flex flex-row w-3/4 gap-8 mt-4 mb-10 lg:mb-24 lg:text-2xl' onSubmit={handleAdd}>
 			<input
-				className='w-full p-1 rounded'
+				className='w-full p-1 lg:p-3 rounded'
 				type='input'
 				value={todo}
 				onChange={e => {
@@ -19,7 +19,7 @@ const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }) => {
 				placeholder='Enter a todos'
 			/>
 
-			<button className='absolute right-0 scale-90 py-1 px-3 rounded bg-slate-400 text-white' type='submit'>
+			<button className='absolute right-0 scale-90 lg:inset-y-0 py-1 px-3 rounded bg-slate-400 text-white' type='submit'>
 				Add
 			</button>
 		</form>
